@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular JS - Practice</title>
+	<script src="angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="x='img1.jpg'">
+	<h1>{{x}}</h1>
+	<img src="{{x}}" width="500" ng-click="x='img2.jpg'" ng-mouseover="x='img3.jpg'" ng-mouseout="x='img1.jpg'">
+</body>
+</html>
