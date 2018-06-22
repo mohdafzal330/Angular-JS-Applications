@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Angular JS - Practice</title>
-	<script src="angular.min.js"></script>
+	<title>Angular Practice</title>
+	<script src="js/angular.min.js"></script>
 </head>
-<body ng-app="" ng-init="x='img1.jpg'">
-	<h1>{{x}}</h1>
-	<img src="{{x}}" width="500" ng-click="x='img2.jpg'" ng-mouseover="x='img3.jpg'" ng-mouseout="x='img1.jpg'">
+	<script>
+		app = angular.module("app1",[])
+		app.controller("c1",function($scope){
+			$scope.num=23;
+			$scope.status="";
+			for(i=2;i<$scope.num;i++){
+				if($scope.num%i==0)
+					$scope.status="Not"
+			}
+		})
+	</script>
+<body ng-app="app1" ng-controller="c1">
+	<h1>{{status}}, Prime</h1>
 </body>
 </html>
