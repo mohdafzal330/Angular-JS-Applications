@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Practice</title>
+	<script src="js/angular.min.js"></script>
+</head>
+	<script>
+		app = angular.module("app1",[])
+		app.controller("c1",function($scope){
+			num = parseInt(prompt("Enter a number"))
+			$scope.num=num;
+			$scope.status="YES";
+			for(i=2;i<$scope.num;i++){
+				if($scope.num%i==0)
+					$scope.status="Not"
+			}
+		})
+	</script>
+<body ng-app="app1" ng-controller="c1">
+	<h1>{{status}}, Prime</h1>
+</body>
+</html>
