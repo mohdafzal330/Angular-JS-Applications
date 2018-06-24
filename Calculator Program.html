@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator Program in Angular JS</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<script src="js/angular.min.js"></script>
+	<script>
+		app = angular.module("myapp",[])
+		app.controller("con",fun)
+		function fun($scope){
+			$scope.add = function(){
+				$scope.res = parseInt($scope.a)+parseInt($scope.b)
+			}
+			$scope.sub = function(){
+				$scope.res = $scope.a-$scope.b
+			}
+			$scope.mul = function(){
+				$scope.res = $scope.a*$scope.b
+			}
+			$scope.div = function(){
+				$scope.res = $scope.a/$scope.b
+			}
+		}
+
+	</script>
+</head>
+<body ng-app="myapp" ng-controller="con">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-3"></div>
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<h3 class="text-primary">Calculator Operations in Angular JS</h3>
+				<table class="table">
+					<tr>
+						<td>First Number</td>
+						<td><input type="text" name="" ng-model="a"></td>
+					</tr>
+					<tr>
+						<td>Second Number</td>
+						<td><input type="text" name="" ng-model="b"></td>
+					</tr>
+					<tr>
+						<td>Final Result</td>
+						<td><input type="text" name="" ng-model="res"></td>
+					</tr>
+					<tr rowspan="1">
+						<td></td>
+						<td></td>
+						<td> <input type="button" name="" value="+" ng-click="add()"> </td>
+						<td> <input type="button" name="" value="-" ng-click="sub()"> </td>
+						<td> <input type="button" name="" value="*" ng-click="mul()"> </td>
+						<td> <input type="button" name="" value="/" ng-click="div()"> </td>						
+					</tr>
+					
+				</table>
+
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-3"></div>
+		</div>
+	</div>
+	
+</body>
+</html>
